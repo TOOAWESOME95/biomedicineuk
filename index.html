@@ -1,0 +1,966 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BIOmedicineUK | Bioresonance Clinic, Delph</title>
+<meta name="description" content="Private holistic health care in Delph, Oldham. Bioresonance analysis and treatment, urine sample testing, device rental, and certified Rayonex training. Rated 5.0 from 119 Google reviews.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b1a19;
+  --ink-2:#102624;
+  --ink-3:#173533;
+  --cream:#f6f1e7;
+  --cream-2:#ece4d4;
+  --paper:#fbf8f2;
+  --gold:#c8a76a;
+  --gold-2:#e3cc9b;
+  --sage:#8fb5a4;
+  --sage-2:#5f8c79;
+  --text:#1d2b2a;
+  --muted:#5d6b69;
+  --line:rgba(11,26,25,.12);
+  --line-light:rgba(246,241,231,.14);
+  --radius:22px;
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Manrope",system-ui,-apple-system,Segoe UI,sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:var(--sans);color:var(--text);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+::selection{background:var(--gold);color:var(--ink)}
+
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+.eyebrow{font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--sage-2);display:inline-flex;align-items:center;gap:.8em}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.dark .eyebrow{color:var(--gold-2)}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.08;letter-spacing:-.015em}
+h2{font-size:clamp(2.2rem,4.6vw,3.9rem);margin:.5em 0 .4em}
+h2 em,h1 em{font-style:italic;color:var(--gold)}
+.lead{font-size:1.12rem;color:var(--muted);max-width:60ch}
+.dark{background:var(--ink);color:var(--cream)}
+.dark .lead{color:rgba(246,241,231,.72)}
+section{position:relative}
+.pad{padding:clamp(80px,11vw,150px) 0}
+
+.btn{display:inline-flex;align-items:center;gap:.7em;padding:1em 1.7em;border-radius:999px;font-weight:600;font-size:.95rem;transition:transform .4s var(--ease),background .3s,color .3s,box-shadow .4s}
+.btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:var(--ink);box-shadow:0 10px 30px -10px rgba(200,167,106,.7)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 18px 40px -12px rgba(200,167,106,.85)}
+.btn-ghost{border:1px solid var(--line-light);color:var(--cream)}
+.btn-ghost:hover{background:rgba(246,241,231,.08)}
+.btn-dark{background:var(--ink);color:var(--cream)}
+.btn-dark:hover{transform:translateY(-2px);background:var(--ink-3)}
+.btn svg{width:16px;height:16px}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,backdrop-filter .4s,padding .4s,border-color .4s;padding:22px 0;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(11,26,25,.78);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);padding:12px 0;border-color:var(--line-light)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:.6em;color:var(--cream);font-family:var(--serif);font-size:1.35rem;letter-spacing:.01em}
+.logo-mark{width:34px;height:34px;flex:none}
+.logo b{font-weight:500}
+.logo span{font-family:var(--sans);font-size:.62rem;letter-spacing:.2em;padding:.25em .55em;border:1px solid var(--gold);color:var(--gold-2);border-radius:999px;margin-left:.1em}
+.nav-links{display:flex;gap:2px;align-items:center}
+.nav-links a{color:rgba(246,241,231,.78);font-size:.88rem;font-weight:500;padding:.55em .85em;border-radius:999px;transition:color .3s,background .3s}
+.nav-links a:hover{color:var(--cream);background:rgba(246,241,231,.07)}
+.nav-cta{padding:.7em 1.3em!important;background:var(--gold)!important;color:var(--ink)!important;font-weight:600!important}
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line-light);position:relative}
+.burger i{position:absolute;left:13px;right:13px;height:1.5px;background:var(--cream);transition:transform .4s var(--ease),top .4s}
+.burger i:nth-child(1){top:17px}.burger i:nth-child(2){top:25px}
+.menu-open .burger i:nth-child(1){top:21px;transform:rotate(45deg)}
+.menu-open .burger i:nth-child(2){top:21px;transform:rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;z-index:40;background:var(--ink);display:flex;flex-direction:column;justify-content:center;padding:90px 28px 40px;gap:4px;opacity:0;pointer-events:none;transition:opacity .45s var(--ease)}
+.mobile-menu a{font-family:var(--serif);font-size:2rem;color:var(--cream);padding:.15em 0;transform:translateY(16px);opacity:0;transition:transform .6s var(--ease),opacity .6s}
+.menu-open .mobile-menu{opacity:1;pointer-events:auto}
+.menu-open .mobile-menu a{transform:none;opacity:1}
+.mobile-menu small{color:rgba(246,241,231,.5);margin-top:24px;font-size:.9rem}
+@media (max-width:1060px){.nav-links{display:none}.burger{display:block}}
+
+/* ---------- HERO ---------- */
+.hero{min-height:100svh;display:flex;align-items:center;overflow:hidden;background:radial-gradient(120% 90% at 80% 10%,#1d4a44 0%,var(--ink) 55%);color:var(--cream);padding:130px 0 90px}
+#waves{position:absolute;inset:0;width:100%;height:100%;opacity:.9}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:160px;background:linear-gradient(transparent,var(--ink))}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(2.9rem,7vw,6.2rem);margin:.35em 0 .35em}
+.hero h1 .line{display:block;overflow:hidden}
+.hero h1 .line>span{display:inline-block;transform:translateY(110%);animation:rise 1.2s var(--ease) forwards}
+.hero h1 .line:nth-child(2)>span{animation-delay:.12s}
+.hero h1 .line:nth-child(3)>span{animation-delay:.24s}
+@keyframes rise{to{transform:none}}
+.fade-up{opacity:0;transform:translateY(24px);animation:fu 1.1s var(--ease) forwards}
+@keyframes fu{to{opacity:1;transform:none}}
+.hero .lead{color:rgba(246,241,231,.75);font-size:1.18rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:2.2em}
+.rating-pill{display:inline-flex;align-items:center;gap:14px;margin-top:2.6em;padding:10px 20px 10px 10px;border-radius:999px;background:rgba(246,241,231,.06);border:1px solid var(--line-light);backdrop-filter:blur(8px)}
+.g-badge{width:38px;height:38px;border-radius:50%;background:var(--cream);display:grid;place-items:center}
+.g-badge svg{width:20px;height:20px}
+.rating-pill strong{font-family:var(--serif);font-size:1.5rem;font-weight:400}
+.stars{color:var(--gold);letter-spacing:2px;font-size:.95rem}
+.rating-pill small{display:block;color:rgba(246,241,231,.6);font-size:.78rem;line-height:1.2}
+
+.hero-visual{position:relative;aspect-ratio:4/5;max-width:440px;justify-self:end;width:100%}
+.hero-photo{position:absolute;inset:0;border-radius:240px 240px 28px 28px;overflow:hidden;border:1px solid var(--line-light);box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 1.5s var(--ease)}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(11,26,25,.65))}
+.orbit{position:absolute;inset:-34px;border-radius:50%;border:1px dashed rgba(200,167,106,.35);animation:spin 60s linear infinite}
+.orbit::before{content:"";position:absolute;top:50%;left:-5px;width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 18px var(--gold)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.float-card{position:absolute;z-index:3;background:rgba(246,241,231,.92);color:var(--ink);border-radius:18px;padding:16px 18px;box-shadow:0 30px 60px -25px rgba(0,0,0,.55);backdrop-filter:blur(12px);animation:bob 6s ease-in-out infinite}
+.float-card.a{left:-60px;bottom:70px;max-width:240px}
+.float-card.b{right:-24px;top:40px;animation-delay:-3s}
+.float-card .stars{font-size:.8rem}
+.float-card p{font-family:var(--serif);font-style:italic;font-size:.98rem;line-height:1.35;margin:.3em 0}
+.float-card small{font-size:.75rem;color:var(--muted);font-weight:600}
+.float-card .big{font-family:var(--serif);font-size:1.9rem;line-height:1}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.scroll-cue{position:absolute;left:50%;bottom:28px;z-index:3;transform:translateX(-50%);width:24px;height:38px;border-radius:14px;border:1px solid rgba(246,241,231,.35)}
+.scroll-cue::after{content:"";position:absolute;left:50%;top:8px;width:3px;height:7px;border-radius:3px;background:var(--gold);transform:translateX(-50%);animation:cue 2s infinite}
+@keyframes cue{60%{opacity:0;transform:translate(-50%,12px)}100%{opacity:0}}
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-visual{justify-self:center;max-width:340px;margin-top:20px}
+  .float-card.a{left:-10px}.float-card.b{right:-6px}
+}
+
+/* ---------- MARQUEE ---------- */
+.marquee{background:var(--ink);color:var(--cream);border-top:1px solid var(--line-light);border-bottom:1px solid var(--line-light);overflow:hidden;padding:26px 0}
+.marquee-track{display:flex;gap:56px;width:max-content;animation:marq 55s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-item{display:flex;align-items:center;gap:56px;font-family:var(--serif);font-size:1.5rem;font-style:italic;font-weight:300;white-space:nowrap;color:rgba(246,241,231,.85)}
+.marquee-item::after{content:"✦";font-style:normal;color:var(--gold);font-size:.9rem}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ---------- WHAT IS ---------- */
+.what-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,7vw,100px);align-items:start}
+.what-sticky{position:sticky;top:120px}
+.freq-vis{margin-top:40px;aspect-ratio:1;max-width:400px;position:relative;border-radius:50%;background:radial-gradient(circle,var(--cream) 0%,var(--cream-2) 70%)}
+.freq-vis span{position:absolute;inset:0;margin:auto;border-radius:50%;border:1px solid var(--sage);animation:pulse 4.5s var(--ease) infinite;opacity:0}
+.freq-vis span:nth-child(2){animation-delay:1.1s}.freq-vis span:nth-child(3){animation-delay:2.2s}.freq-vis span:nth-child(4){animation-delay:3.3s}
+@keyframes pulse{0%{transform:scale(.15);opacity:1}100%{transform:scale(1);opacity:0}}
+.freq-vis .core{position:absolute;inset:0;margin:auto;width:22%;height:22%;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--gold-2),var(--gold) 60%,#a5844b);box-shadow:0 0 60px rgba(200,167,106,.6)}
+.what-blocks{display:grid;gap:22px}
+.wblock{padding:36px;border-radius:var(--radius);background:#fff;border:1px solid var(--line);transition:transform .6s var(--ease),box-shadow .6s}
+.wblock:hover{transform:translateY(-4px);box-shadow:0 30px 60px -35px rgba(11,26,25,.35)}
+.wblock .num{font-family:var(--serif);font-size:.95rem;color:var(--gold);font-style:italic}
+.wblock h3{font-size:1.9rem;margin:.25em 0 .5em}
+.wblock p{color:var(--muted)}
+.wblock p+p{margin-top:1em}
+.wblock.sun{background:linear-gradient(140deg,#fff7e4,#fff 60%);position:relative;overflow:hidden}
+.wblock.sun::before{content:"";position:absolute;right:-80px;top:-80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(227,204,155,.75),transparent 70%)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.2em}
+.chip{font-size:.8rem;font-weight:600;padding:.45em 1em;border-radius:999px;background:var(--cream);color:var(--ink-3)}
+@media (max-width:900px){.what-grid{grid-template-columns:1fr}.what-sticky{position:static}.freq-vis{max-width:260px}}
+
+/* ---------- SERVICES ---------- */
+.services{background:var(--ink);overflow:hidden}
+.services::before{content:"";position:absolute;width:900px;height:900px;left:-300px;top:-200px;background:radial-gradient(circle,rgba(95,140,121,.25),transparent 60%);pointer-events:none}
+.sv-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:56px}
+.sv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.sv{position:relative;padding:34px 30px 30px;border-radius:var(--radius);background:linear-gradient(160deg,rgba(246,241,231,.06),rgba(246,241,231,.015));border:1px solid var(--line-light);overflow:hidden;transition:transform .6s var(--ease),border-color .4s;display:flex;flex-direction:column}
+.sv::before{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,0%),rgba(200,167,106,.16),transparent 45%);opacity:0;transition:opacity .4s}
+.sv:hover{transform:translateY(-6px);border-color:rgba(200,167,106,.45)}
+.sv:hover::before{opacity:1}
+.sv .icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:rgba(200,167,106,.12);color:var(--gold-2);margin-bottom:22px}
+.sv .icon svg{width:24px;height:24px}
+.sv h3{font-size:1.65rem;margin-bottom:.4em}
+.sv p{color:rgba(246,241,231,.66);font-size:.95rem;flex:1}
+.sv .price{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;margin-top:26px;padding-top:20px;border-top:1px solid var(--line-light)}
+.sv .price b{font-family:var(--serif);font-weight:400;font-size:2rem;color:var(--gold-2)}
+.sv .price small{color:rgba(246,241,231,.55);font-size:.8rem;letter-spacing:.05em}
+.sv .price .sep{color:rgba(246,241,231,.25)}
+.sv.featured{background:linear-gradient(160deg,rgba(200,167,106,.2),rgba(200,167,106,.04));border-color:rgba(200,167,106,.4)}
+.sv .tag{position:absolute;top:22px;right:22px;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--ink);background:var(--gold);padding:.4em .8em;border-radius:999px}
+.sv-note{margin-top:26px;color:rgba(246,241,231,.5);font-size:.85rem}
+@media (max-width:980px){.sv-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.sv-grid{grid-template-columns:1fr}}
+
+/* ---------- REVIEWS ---------- */
+.reviews{background:var(--cream)}
+.rv-top{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;margin-bottom:50px}
+.score{display:flex;align-items:center;gap:24px;padding:24px 30px;background:#fff;border-radius:var(--radius);border:1px solid var(--line)}
+.score .big{font-family:var(--serif);font-size:4.2rem;line-height:.9;font-weight:300}
+.score .stars{font-size:1.2rem}
+.score small{color:var(--muted);font-size:.85rem;display:block}
+.score a{color:var(--sage-2);font-weight:600;font-size:.85rem;border-bottom:1px solid currentColor}
+.spotlight{position:relative;background:var(--ink);color:var(--cream);border-radius:32px;padding:clamp(36px,6vw,80px);overflow:hidden;margin-bottom:60px;min-height:380px}
+.spotlight::before{content:"\201C";position:absolute;font-family:var(--serif);font-size:24rem;line-height:1;top:-60px;left:20px;color:rgba(200,167,106,.12);pointer-events:none}
+.spot-slide{position:absolute;inset:clamp(36px,6vw,80px);opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease),transform .9s var(--ease);pointer-events:none;display:flex;flex-direction:column;justify-content:center}
+.spot-slide.on{opacity:1;transform:none;pointer-events:auto;position:relative;inset:auto}
+.spot-slide blockquote{font-family:var(--serif);font-weight:300;font-size:clamp(1.4rem,2.8vw,2.3rem);line-height:1.3;max-width:36ch}
+.spot-slide cite{display:flex;align-items:center;gap:14px;margin-top:30px;font-style:normal}
+.avatar{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-weight:700;color:var(--ink);background:var(--gold);flex:none;font-size:1rem}
+.spot-slide cite b{display:block}
+.spot-slide cite small{color:rgba(246,241,231,.55);font-size:.82rem}
+.spot-nav{display:flex;gap:10px;align-items:center;margin-top:34px;position:relative;z-index:2}
+.spot-nav button{width:46px;height:46px;border-radius:50%;border:1px solid var(--line-light);display:grid;place-items:center;transition:background .3s}
+.spot-nav button:hover{background:rgba(246,241,231,.1)}
+.spot-nav svg{width:18px;height:18px}
+.dots{display:flex;gap:6px;margin-left:12px}
+.dots i{width:8px;height:8px;border-radius:999px;background:rgba(246,241,231,.25);transition:width .4s var(--ease),background .4s;cursor:pointer}
+.dots i.on{width:28px;background:var(--gold)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.filters button{padding:.6em 1.15em;border-radius:999px;border:1px solid var(--line);font-size:.85rem;font-weight:600;background:transparent;transition:all .3s}
+.filters button:hover{border-color:var(--ink)}
+.filters button.on{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.wall{columns:3 320px;column-gap:18px}
+.rcard{break-inside:avoid;margin-bottom:18px;background:#fff;border-radius:20px;padding:26px;border:1px solid var(--line);transition:transform .5s var(--ease),box-shadow .5s,opacity .4s}
+.rcard:hover{transform:translateY(-3px);box-shadow:0 24px 50px -30px rgba(11,26,25,.4)}
+.rcard header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.rcard header .avatar{width:40px;height:40px;font-size:.9rem}
+.rcard header b{display:block;font-size:.95rem;line-height:1.2}
+.rcard header small{font-size:.78rem;color:var(--muted)}
+.rcard header svg{width:18px;height:18px;margin-left:auto;flex:none}
+.rcard .stars{font-size:.85rem;display:block;margin-bottom:8px}
+.rcard .txt{color:#38403f;font-size:.95rem;white-space:pre-line;overflow:hidden;position:relative}
+.rcard .txt.clamp{max-height:9.6em}
+.rcard .txt.clamp::after{content:"";position:absolute;inset:auto 0 0;height:3em;background:linear-gradient(transparent,#fff)}
+.rcard .more{margin-top:10px;font-size:.82rem;font-weight:700;color:var(--sage-2)}
+.rv-foot{text-align:center;margin-top:40px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn-line{border:1px solid var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--cream)}
+@media (max-width:760px){.rv-top{grid-template-columns:1fr}}
+
+/* ---------- ABOUT ---------- */
+.story{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,100px);align-items:center}
+.story-quote{font-family:var(--serif);font-size:clamp(1.25rem,2vw,1.55rem);font-weight:300;line-height:1.5;color:var(--text)}
+.story-quote p+p{margin-top:1em}
+.story-quote .sig{font-family:var(--sans);font-size:.9rem;font-weight:600;color:var(--sage-2);margin-top:1.5em;letter-spacing:.04em}
+.story-panel{background:var(--ink);color:var(--cream);border-radius:32px;padding:clamp(32px,5vw,56px);position:relative;overflow:hidden}
+.story-panel::after{content:"";position:absolute;right:-120px;bottom:-120px;width:320px;height:320px;border-radius:50%;border:1px solid rgba(200,167,106,.25);box-shadow:0 0 0 40px rgba(200,167,106,.04),0 0 0 80px rgba(200,167,106,.03)}
+.story-panel p{color:rgba(246,241,231,.75);position:relative;z-index:1}
+.story-panel strong{color:var(--gold-2);font-weight:600}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:80px}
+.member{border-radius:var(--radius);overflow:hidden;background:#fff;border:1px solid var(--line);transition:transform .6s var(--ease)}
+.member:hover{transform:translateY(-6px)}
+.member .ph{aspect-ratio:4/4.2;overflow:hidden;background:var(--cream-2);position:relative}
+.member .ph img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 1.2s var(--ease);filter:saturate(.9)}
+.member:hover .ph img{transform:scale(1.05)}
+.member .bd{padding:24px 26px 28px}
+.member h3{font-size:1.6rem}
+.member .role{color:var(--gold);font-family:var(--serif);font-style:italic;margin-bottom:12px}
+.member ul{list-style:none;display:grid;gap:6px}
+.member li{font-size:.88rem;color:var(--muted);padding-left:18px;position:relative}
+.member li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--gold)}
+@media (max-width:900px){.story{grid-template-columns:1fr}.team{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.team{grid-template-columns:1fr}}
+
+/* ---------- REMOTE (samples + rental) ---------- */
+.remote{background:var(--cream)}
+.remote-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:56px}
+.rpanel{border-radius:28px;padding:clamp(30px,4vw,48px);background:#fff;border:1px solid var(--line);position:relative;overflow:hidden}
+.rpanel.dk{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.rpanel h3{font-size:2.1rem;margin:.3em 0 .5em}
+.rpanel p{color:var(--muted)}
+.rpanel.dk p{color:rgba(246,241,231,.7)}
+.stat-row{display:flex;gap:28px;margin:26px 0;flex-wrap:wrap}
+.stat-row div b{font-family:var(--serif);font-weight:300;font-size:2.6rem;display:block;line-height:1;color:var(--sage-2)}
+.rpanel.dk .stat-row div b{color:var(--gold-2)}
+.stat-row div small{font-size:.8rem;color:var(--muted)}
+.rpanel.dk .stat-row div small{color:rgba(246,241,231,.55)}
+.steps{list-style:none;counter-reset:s;display:grid;gap:14px;margin-top:22px}
+.steps li{counter-increment:s;display:flex;gap:16px;align-items:flex-start}
+.steps li::before{content:counter(s);flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);background:var(--cream);color:var(--ink);font-size:1rem}
+.steps li span{padding-top:5px}
+.incl{list-style:none;display:grid;gap:12px;margin:22px 0}
+.incl li{display:flex;gap:12px;align-items:flex-start}
+.incl svg{width:20px;height:20px;color:var(--gold);flex:none;margin-top:3px}
+.price-xl{display:flex;align-items:baseline;gap:10px;margin:8px 0 26px}
+.price-xl b{font-family:var(--serif);font-weight:300;font-size:3.6rem;line-height:1;color:var(--gold-2)}
+@media (max-width:900px){.remote-grid{grid-template-columns:1fr}}
+
+/* ---------- TRAINING ---------- */
+.training{background:var(--ink);overflow:hidden}
+.tr-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,90px);align-items:center}
+.tr-media{position:relative}
+.tr-media img{border-radius:28px;width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line-light)}
+.tr-media .badge{position:absolute;right:-18px;bottom:-26px;width:150px;height:150px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;text-align:center;font-family:var(--serif);line-height:1.1;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+.tr-media .badge svg{position:absolute;inset:0;animation:spin 22s linear infinite}
+.tr-media .badge b{font-size:2rem;font-weight:400;display:block}
+.tr-media .badge small{font-family:var(--sans);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700}
+.timeline{display:grid;gap:0;margin:30px 0;border-left:1px solid var(--line-light)}
+.timeline div{padding:10px 0 10px 24px;position:relative;color:rgba(246,241,231,.75);font-size:.95rem}
+.timeline div::before{content:"";position:absolute;left:-5px;top:18px;width:9px;height:9px;border-radius:50%;background:var(--ink);border:1px solid var(--gold)}
+.timeline b{color:var(--gold-2);font-weight:600;margin-right:.5em}
+.tr-prices{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:30px 0}
+.tr-prices div{padding:22px;border-radius:18px;border:1px solid var(--line-light);background:rgba(246,241,231,.03)}
+.tr-prices div b{font-family:var(--serif);font-weight:300;font-size:2.4rem;color:var(--gold-2);display:block;line-height:1.1}
+.tr-prices div span{font-weight:600;display:block;margin-bottom:6px}
+.tr-prices div small{color:rgba(246,241,231,.55);font-size:.8rem;display:block;margin-top:6px}
+@media (max-width:900px){.tr-grid{grid-template-columns:1fr}.tr-media .badge{right:10px;width:120px;height:120px}.tr-media .badge b{font-size:1.6rem}}
+@media (max-width:480px){.tr-prices{grid-template-columns:1fr}}
+
+/* ---------- DEVICES ---------- */
+.dv-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;align-items:stretch;margin-top:56px}
+.device{border-radius:28px;background:linear-gradient(180deg,#fff,var(--cream));border:1px solid var(--line);padding:36px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;overflow:hidden}
+.device::before{content:"";position:absolute;top:40px;left:50%;width:220px;height:220px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(143,181,164,.35),transparent 70%)}
+.device img{height:200px;object-fit:contain;position:relative;transition:transform .8s var(--ease);mix-blend-mode:multiply}
+.device:hover img{transform:translateY(-8px) scale(1.04)}
+.device h3{font-size:1.8rem;margin-top:22px}
+.device p{color:var(--muted);font-size:.92rem}
+.dv-intro{background:var(--ink);color:var(--cream);border-radius:28px;padding:36px;display:flex;flex-direction:column;justify-content:space-between;gap:30px}
+.dv-intro h3{font-size:1.9rem}
+.dv-intro p{color:rgba(246,241,231,.7);font-size:.95rem;margin-top:.8em}
+.dv-intro .partner{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-2);font-weight:700}
+@media (max-width:900px){.dv-grid{grid-template-columns:1fr}}
+
+/* ---------- CONTACT ---------- */
+.contact{background:var(--ink);overflow:hidden}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:50px}
+.ct-card{border-radius:28px;border:1px solid var(--line-light);padding:clamp(28px,4vw,46px);background:rgba(246,241,231,.03)}
+.ct-line{display:flex;gap:18px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line-light);transition:padding .4s var(--ease)}
+.ct-line:last-of-type{border-bottom:0}
+a.ct-line:hover{padding-left:8px}
+.ct-line .ic{width:50px;height:50px;border-radius:50%;background:rgba(200,167,106,.12);color:var(--gold-2);display:grid;place-items:center;flex:none}
+.ct-line .ic svg{width:21px;height:21px}
+.ct-line small{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,241,231,.5);font-weight:600}
+.ct-line span{font-family:var(--serif);font-size:clamp(1.15rem,2vw,1.5rem);color:var(--cream);word-break:break-word}
+.map{border-radius:28px;overflow:hidden;min-height:420px;border:1px solid var(--line-light);position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.6) contrast(1.05) brightness(.95)}
+@media (max-width:900px){.ct-grid{grid-template-columns:1fr}.map{min-height:320px}}
+
+footer{background:#071211;color:rgba(246,241,231,.6);padding:60px 0 40px;font-size:.88rem}
+.ft{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+.ft-links{display:flex;flex-wrap:wrap;gap:6px 22px;max-width:520px}
+.ft-links a:hover{color:var(--gold-2)}
+.disclaimer{margin-top:40px;padding-top:24px;border-top:1px solid var(--line-light);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.8rem;color:rgba(246,241,231,.45)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+
+/* progress bar */
+.progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--sage),var(--gold));z-index:60;width:0}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv,.fade-up,.hero h1 .line>span{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="BIOmedicineUK home">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" stroke="#c8a76a" stroke-width="1"/>
+        <circle cx="20" cy="20" r="12.5" stroke="#c8a76a" stroke-opacity=".5" stroke-width="1"/>
+        <path d="M5 20c3 0 3-8 6-8s3 16 6 16 3-16 6-16 3 16 6 16 3-8 6-8" stroke="#e3cc9b" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <div><b>BIO</b>medicine<span>UK</span></div>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#bioresonance">Bioresonance</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#remote">Samples &amp; Rental</a>
+      <a href="#training">Training</a>
+      <a href="#devices">Purchase</a>
+      <a href="#contact" class="nav-cta">Book a visit</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu"><i></i><i></i></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#bioresonance">What is Bioresonance?</a>
+  <a href="#services">Our Services</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#about">About Us</a>
+  <a href="#remote">Sending Samples</a>
+  <a href="#remote">Device Rental</a>
+  <a href="#training">Training Courses</a>
+  <a href="#devices">Purchase</a>
+  <a href="#contact">Contact Us</a>
+  <small>07908 149 678 · biomedicineuk@gmail.com</small>
+</div>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero dark">
+  <canvas id="waves" aria-hidden="true"></canvas>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow fade-up" style="animation-delay:.1s">Welcome to private holistic health care</span>
+      <h1>
+        <span class="line"><span>Restore your</span></span>
+        <span class="line"><span>body's natural</span></span>
+        <span class="line"><span><em>resonance.</em></span></span>
+      </h1>
+      <p class="lead fade-up" style="animation-delay:.5s">Bioresonance analysis and treatment in Delph, Saddleworth. Non-invasive, painless and safe at any age, using medically classified Rayonex equipment to help the body heal itself.</p>
+      <div class="hero-actions fade-up" style="animation-delay:.7s">
+        <a href="#contact" class="btn btn-gold">Book your full analysis
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#bioresonance" class="btn btn-ghost">What is bioresonance?</a>
+      </div>
+      <a href="#reviews" class="rating-pill fade-up" style="animation-delay:.9s">
+        <span class="g-badge"><svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.7 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.2C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 7l7.4 5.7c4.3-4 6.9-9.9 6.9-17.2z"/><path fill="#FBBC05" d="M10.5 28.5c-.5-1.4-.8-2.9-.8-4.5s.3-3.1.8-4.5l-7.9-6.2C.9 16.6 0 20.2 0 24s.9 7.4 2.6 10.7l7.9-6.2z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.2C6.6 42.6 14.6 48 24 48z"/></svg></span>
+        <strong>5.0</strong>
+        <div><span class="stars">★★★★★</span><small>119 Google reviews</small></div>
+      </a>
+    </div>
+    <div class="hero-visual fade-up" style="animation-delay:.4s">
+      <div class="orbit"></div>
+      <div class="hero-photo"><img id="heroImg" src="images/clinic.jpg" alt="The BIOmedicineUK clinic in Delph"></div>
+      <div class="float-card b"><div class="big">119</div><small>five-star reviews</small></div>
+      <div class="float-card a">
+        <span class="stars">★★★★★</span>
+        <p>"I honestly can't believe how much better I feel after the treatments."</p>
+        <small>Katie Ingram · Google</small>
+      </div>
+    </div>
+  </div>
+  <a href="#bioresonance" class="scroll-cue" aria-label="Scroll down"></a>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marquee"></div>
+</div>
+
+<!-- WHAT IS BIORESONANCE -->
+<section class="pad" id="bioresonance">
+  <div class="wrap what-grid">
+    <div class="what-sticky rv">
+      <span class="eyebrow">What is bioresonance?</span>
+      <h2>Every cell has a <em>frequency.</em></h2>
+      <p class="lead">Bioresonance is based on modern biophysics: every cell in the body resonates at a particular frequency, and groups of cells in an organ or system form their own unique patterns.</p>
+      <div class="freq-vis" aria-hidden="true"><span></span><span></span><span></span><span></span><div class="core"></div></div>
+    </div>
+    <div class="what-blocks">
+      <article class="wblock rv">
+        <span class="num">01 · The science</span>
+        <h3>When patterns are disturbed</h3>
+        <p>When our body is ill or diseased these frequency patterns are disturbed or distorted. With bioresonance according to Paul Schmidt, a resonant field of sinusoid frequencies rebalances the body and creates an environment in which the body heals itself.</p>
+        <p>Almost any condition will benefit from bioresonance therapy. It addresses the underlying causes of chronic and degenerative diseases. Pathogens and toxins can block the cells' ability to receive oxygen and nutrients and to eliminate metabolic wastes. They eventually enter the cells and produce symptoms of chronic illness.</p>
+      </article>
+      <article class="wblock sun rv">
+        <span class="num">02 · How does it work?</span>
+        <h3>An example in nature: the sun</h3>
+        <p>We know we "get vitamin D" from the sun. But it isn't the heat that gives us vitamin D. The sun emits a certain resonance that stimulates the body to produce vitamin D itself. When our body absorbs the rays, it isn't receiving vitamin D chemically. It's absorbing vibration from the sun.</p>
+        <p>In the same way, bioresonance sends the body specific vibrational frequencies that harmonise specific imbalanced energies.</p>
+      </article>
+      <article class="wblock rv">
+        <span class="num">03 · What can it do for you?</span>
+        <h3>Treat the cause, not just the symptom</h3>
+        <p>Instead of focusing on the symptoms of an illness, bioresonance strives to find and treat the cause of a disorder. It's designed to enhance the body's own regulation and detoxification, and to boost its natural immune system to help the body heal itself.</p>
+        <div class="chips"><span class="chip">Non-invasive</span><span class="chip">Painless</span><span class="chip">Safe at any age</span><span class="chip">Medically classified equipment</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services dark pad" id="services">
+  <div class="wrap">
+    <div class="sv-head">
+      <div class="rv">
+        <span class="eyebrow">Our services</span>
+        <h2>Care that starts with <em>understanding.</em></h2>
+      </div>
+      <p class="lead rv d1" style="max-width:44ch">Whether you're new here or you've known us for years, here's an introduction to the services we provide.</p>
+    </div>
+    <div class="sv-grid">
+      <article class="sv featured rv">
+        <span class="tag">Start here</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M8 11h1.5l1-2.5 1.5 5 1-2.5H15"/></svg></div>
+        <h3>Full Analysis</h3>
+        <p>Full body scan and initial consultation. May involve ECG and allergy test if required. This must be carried out for every patient before treatment can be given.</p>
+        <div class="price"><b>£120</b><small>1.5 HOURS</small></div>
+      </article>
+      <article class="sv rv d1">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12c2 0 2-5 4-5s2 10 4 10 2-10 4-10 2 10 4 10 2-5 4-5"/></svg></div>
+        <h3>Treatment Plans</h3>
+        <p>Tailored treatment sessions based on your initial analysis, or maintenance programmes to keep your body balanced.</p>
+        <div class="price"><b>£50</b><small>1 HOUR</small><span class="sep">/</span><b>£70</b><small>2 HOURS</small></div>
+      </article>
+      <article class="sv rv d2">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div>
+        <h3>Check-up Test</h3>
+        <p>A follow-up after your full analysis, to see how your body is responding.</p>
+        <div class="price"><b>£60</b><small>UP TO 45 MIN</small><span class="sep">/</span><b>£100</b><small>WITH TREATMENT · 2 HRS</small></div>
+      </article>
+      <article class="sv rv">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div>
+        <h3>6 Month Device Rental</h3>
+        <p>Rent a treatment device to use in your own home, with monthly treatment plan updates.</p>
+        <div class="price"><b>£2250</b><small>6 MONTHS</small></div>
+      </article>
+      <article class="sv rv d1">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 3h6M10 3v6L5 18a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 14h9"/></svg></div>
+        <h3>Urine Sample Analysis</h3>
+        <p>Urine samples tested and indicated energetic disturbances reported back to you. Preferable for clients too far away to travel.</p>
+        <div class="price"><b>£120</b><small>PER SAMPLE</small></div>
+      </article>
+      <article class="sv rv d2">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8l10-5 10 5-10 5z"/><path d="M6 10v5c0 1.5 3 3 6 3s6-1.5 6-3v-5M22 8v6"/></svg></div>
+        <h3>Training Course</h3>
+        <p>Courses to help you better understand your Rayonex device and use it to the full. Includes lunches.</p>
+        <div class="price"><b>£490</b><small>TWO DAYS · PER PERSON</small></div>
+      </article>
+    </div>
+    <p class="sv-note rv">Please note: the information given on this website does not replace a consultation with a medical practitioner.</p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews pad" id="reviews">
+  <div class="wrap">
+    <div class="rv-top">
+      <div class="rv">
+        <span class="eyebrow">Reviews</span>
+        <h2>In our clients' <em>own words.</em></h2>
+        <p class="lead">Real stories from real people, shared on Google.</p>
+      </div>
+      <div class="score rv d1">
+        <div class="big" id="scoreNum">5.0</div>
+        <div>
+          <span class="stars">★★★★★</span>
+          <small><b id="reviewCount">119</b> Google reviews</small>
+          <a href="https://www.google.com/search?q=BIOmedicineUK+-+Bioresonance+Clinic" target="_blank" rel="noopener">Read on Google ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="spotlight rv" id="spotlight">
+      <div id="spotSlides"></div>
+      <div class="spot-nav">
+        <button id="prev" aria-label="Previous review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button id="next" aria-label="Next review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+        <div class="dots" id="dots"></div>
+      </div>
+    </div>
+
+    <div class="filters" id="filters" role="tablist"></div>
+    <div class="wall" id="wall"></div>
+    <div class="rv-foot">
+      <button class="btn btn-line" id="loadMore">Show more reviews</button>
+      <a class="btn btn-dark" href="https://www.google.com/search?q=BIOmedicineUK+-+Bioresonance+Clinic" target="_blank" rel="noopener">Leave a review</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="pad" id="about">
+  <div class="wrap">
+    <div class="story">
+      <div class="rv">
+        <span class="eyebrow">Our story</span>
+        <h2>It started with <em>Bee.</em></h2>
+        <div class="story-quote">
+          <p>"A number of years ago my wife, Bee, struggled terribly with eczema. She had coped with it since childhood, but it had become increasingly aggressive. We tried acupuncture, a year-long special diet, creams from all over the world: everything anybody recommended. It became so severe that after another bout of being hospitalised, the doctors could only offer her chemotherapy.</p>
+          <p>At this point we came to bioresonance. That course of treatments completely changed her life and allowed us both to get life back on track in good health. As first-hand witnesses, we know exactly what it is capable of."</p>
+          <div class="sig">William Bennett, Founder</div>
+        </div>
+      </div>
+      <div class="story-panel rv d1">
+        <p style="font-family:var(--serif);font-size:1.45rem;line-height:1.45;color:var(--cream)">Over the past few years we have gained an outstanding reputation for first-class health care, thanks to our pioneering <strong>medically classified</strong> equipment combined with vast experience and knowledge.</p>
+        <p style="margin-top:1.2em">We look forward to helping you and your family understand your symptoms, your body, and why your body is the way it is. In turn, we harmonise specific blocked frequency spectrums, energising you for better health and giving your body the very best environment to recover.</p>
+      </div>
+    </div>
+
+    <div class="team">
+      <article class="member rv">
+        <div class="ph"><img loading="lazy" src="images/will.jpg" alt="William Bennett"></div>
+        <div class="bd">
+          <h3>William Bennett</h3>
+          <div class="role">Founder &amp; Practitioner</div>
+          <ul>
+            <li>Certified Practitioner of Bioresonance</li>
+            <li>Qualified Biochemist of Cell Salts</li>
+            <li>Certified Naturopath</li>
+            <li>Instructor of Bioresonance APS</li>
+            <li>Official Partner of RAYONEX GmbH</li>
+          </ul>
+        </div>
+      </article>
+      <article class="member rv d1">
+        <div class="ph"><img loading="lazy" src="images/bee.jpg" alt="Bee Bennett"></div>
+        <div class="bd">
+          <h3>Bee Bennett</h3>
+          <div class="role">Homeopathic Consultant</div>
+          <ul>
+            <li>Administration Manager</li>
+            <li>Coordinator of BIOmedicineFR (France)</li>
+            <li>Diploma in Anatomy &amp; Physiology</li>
+          </ul>
+        </div>
+      </article>
+      <article class="member rv d2">
+        <div class="ph"><img loading="lazy" src="images/victoria.jpg" alt="Victoria Wharmby"></div>
+        <div class="bd">
+          <h3>Victoria Wharmby</h3>
+          <div class="role">Appointment Management</div>
+          <ul>
+            <li>Telephone, email and text enquiries</li>
+            <li>Training course support</li>
+            <li>Website maintenance</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- REMOTE -->
+<section class="remote pad" id="remote">
+  <div class="wrap">
+    <div class="rv" style="max-width:760px">
+      <span class="eyebrow">Can't visit in person?</span>
+      <h2>Care that reaches <em>you.</em></h2>
+      <p class="lead">In recent years we've expanded to test clients from all over the world. Send a sample by post, or rent a device and treat at home with a plan built for you.</p>
+    </div>
+    <div class="remote-grid">
+      <article class="rpanel rv" id="samples">
+        <span class="eyebrow">Sending samples</span>
+        <h3>Send a urine sample</h3>
+        <p>The test checks the biological frequency spectrums for around 200 different bodily functions, including organs, vitamins and minerals, acidity, hormones, cells and more. Once completed, you'll receive an email of your energetic indicated results.</p>
+        <div class="stat-row">
+          <div><b>~200</b><small>bodily functions checked</small></div>
+          <div><b>£120</b><small>per sample</small></div>
+        </div>
+        <p>Most clients send samples from the whole family, especially if they intend to rent a device. That way everyone can benefit.</p>
+        <ol class="steps">
+          <li><span>Text us on <a href="sms:07908149678"><b>07908 149 678</b></a> with your full name to request the relevant information</span></li>
+          <li><span>Get a sample container (usually free from your doctor or chemist)</span></li>
+          <li><span>Clearly label each sample for accurate personal results</span></li>
+          <li><span>Send by post, using the address we text to you</span></li>
+        </ol>
+      </article>
+      <article class="rpanel dk rv d1" id="rental">
+        <span class="eyebrow">Device rental</span>
+        <h3>Treatment at home</h3>
+        <p>For clients who'd like testing and treatment but can't visit, perhaps because they live far from the clinic, we offer machine rental. We create a treatment plan for each person and monitor progress by testing at the clinic each month.</p>
+        <p style="margin-top:1em">We program memory cards based on your urine sample or in-person visit. You simply run the memory card as instructed, using our rented specialist equipment. It has proved very popular and successful.</p>
+        <ul class="incl">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>Rayonex PS10 device with the latest RAH human medicine programs</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>All necessary accessories</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>Free retesting each month for one person</li>
+        </ul>
+        <div class="price-xl"><b>£2250</b><span style="color:rgba(246,241,231,.6)">for 6 months</span></div>
+        <a href="tel:07908149678" class="btn btn-gold">Enquire: 07908 149 678</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TRAINING -->
+<section class="training dark pad" id="training">
+  <div class="wrap tr-grid">
+    <div class="tr-media rv">
+      <img loading="lazy" src="images/course.jpg" alt="A bioresonance training course at BIOmedicineUK">
+      <div class="badge">
+        <svg viewBox="0 0 150 150" aria-hidden="true"><defs><path id="circ" d="M75 75m-60 0a60 60 0 1 1 120 0a60 60 0 1 1-120 0"/></defs><text font-family="Manrope" font-size="9.5" font-weight="700" letter-spacing="3.2" fill="#0b1a19"><textPath href="#circ">CERTIFIED · RAYONEX · BIORESONANCE · </textPath></text></svg>
+        <div><b>2</b><small>day course</small></div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow rv">Training courses · in person &amp; online</span>
+      <h2 class="rv">Learn the art of <em>bioresonance.</em></h2>
+      <p class="lead rv">A two-day certified course, run in small groups. Whether you want to become a practitioner or simply understand the science behind it, everyone is welcome.</p>
+      <p class="rv" style="color:rgba(246,241,231,.65);margin-top:1em">You don't need a machine to attend. We provide what you need for the practical parts of the course. Those with their own device, or planning to buy one, gain a huge benefit in learning how to get the best from it.</p>
+      <div class="timeline rv">
+        <div><b>9am</b>Begins at our clinic &amp; training centre. Tea, coffee and toast available</div>
+        <div><b>All day</b>Snacks and drinks provided throughout</div>
+        <div><b>Lunch</b>Three courses at the on-site first-class Italian restaurant</div>
+        <div><b>5pm</b>Day ends. Certificates on completion</div>
+      </div>
+      <div class="tr-prices rv">
+        <div><span>In person</span><b>£490</b><small>Per person. Includes all course material, workbooks, snacks, drinks and a three-course lunch each day. Hotels recommended on request.</small></div>
+        <div><span>Online via Zoom</span><b>£390</b><small>Per person. Dates booked once enough students register interest. Certificates sent on request.</small></div>
+      </div>
+      <a href="#contact" class="btn btn-gold rv">Ask about the next course</a>
+    </div>
+  </div>
+</section>
+
+<!-- DEVICES -->
+<section class="pad" id="devices">
+  <div class="wrap">
+    <div class="rv" style="max-width:760px">
+      <span class="eyebrow">Purchase</span>
+      <h2>Would you like to own a <em>bioresonance device?</em></h2>
+      <p class="lead">We have many years of experience supporting and advising home users with their own device, and we supply professional therapy devices for all needs at the best possible price.</p>
+    </div>
+    <div class="dv-grid">
+      <div class="dv-intro rv">
+        <div>
+          <span class="partner">Official partner of Rayonex GmbH</span>
+          <h3 style="margin-top:.6em">Considering becoming a practitioner?</h3>
+          <p>It's best to call us to discuss the options for your custom order. Let's talk about your individual requirements.</p>
+        </div>
+        <div style="display:grid;gap:10px">
+          <a href="tel:07908149678" class="btn btn-gold">Call 07908 149 678</a>
+          <a href="mailto:biomedicineuk@gmail.com" class="btn btn-ghost">Email us</a>
+        </div>
+      </div>
+      <div class="device rv d1">
+        <img loading="lazy" src="images/ps10.png" alt="Rayonex PS10 device">
+        <h3>Rayonex PS10</h3>
+        <p>Compact device for home use, with the latest RAH human medicine programs.</p>
+      </div>
+      <div class="device rv d2">
+        <img loading="lazy" src="images/polar1000.png" alt="Rayonex Polar1000 device">
+        <h3>Rayonex Polar1000</h3>
+        <p>Professional therapy device for practitioners.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact dark pad" id="contact">
+  <div class="wrap">
+    <div class="rv" style="max-width:780px">
+      <span class="eyebrow">Contact us · find us</span>
+      <h2>Let's talk about how we can <em>help you and your family.</em></h2>
+      <p class="lead">Call, text or email to book an appointment or ask a question.</p>
+    </div>
+    <div class="ct-grid">
+      <div class="ct-card rv">
+        <a class="ct-line" href="tel:07908149678">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <div><small>Call or text</small><span>07908 149 678</span></div>
+        </a>
+        <a class="ct-line" href="mailto:biomedicineuk@gmail.com">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></span>
+          <div><small>Email</small><span>biomedicineuk@gmail.com</span></div>
+        </a>
+        <a class="ct-line" href="https://www.google.com/maps/dir/?api=1&destination=Gatehead+Business+Park,+Delph+New+Road,+Oldham+OL3+5DE" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><small>Visit · tap for directions</small><span>Gatehead Business Park, Delph New Road, Oldham OL3 5DE</span></div>
+        </a>
+        <div style="margin-top:26px;display:flex;gap:12px;flex-wrap:wrap">
+          <a href="tel:07908149678" class="btn btn-gold">Book an appointment</a>
+          <a href="sms:07908149678" class="btn btn-ghost">Send a text</a>
+        </div>
+      </div>
+      <div class="map rv d1">
+        <iframe title="Map to BIOmedicineUK" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Gatehead+Business+Park,+Delph+New+Road,+Oldham+OL3+5DE&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <a href="#top" class="logo" style="color:var(--cream)"><div><b>BIO</b>medicine<span>UK</span></div></a>
+        <p style="margin-top:12px;max-width:34ch">Private holistic health care. Bioresonance analysis, treatment and training in Delph, Oldham.</p>
+      </div>
+      <nav class="ft-links" aria-label="Footer">
+        <a href="#bioresonance">What is Bioresonance?</a><a href="#reviews">Reviews</a><a href="#about">About Us</a><a href="#services">Our Services</a><a href="#samples">Sending Samples</a><a href="#training">Training Courses</a><a href="#rental">Device Rental</a><a href="#devices">Purchase</a><a href="#contact">Contact Us</a>
+      </nav>
+    </div>
+    <div class="disclaimer">
+      <span>© BIOmedicineUK 2026</span>
+      <span>Please note that the information given on this website does not replace a consultation with a medical practitioner.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------------- Reviews data (Google) ---------------- */
+const REVIEWS = [
+  {n:"Claire McKenzie", d:"July 2026", t:["family","wellbeing"], feat:"I think of the bioresonance scan as an MOT for my body.", x:`I have been attending Biomedicine UK since last year, and it has become something I now do every year as part of looking after my health. I think of the bioresonance scan as an MOT for my body. It gives me reassurance and helps me feel more informed about my health alongside the care I receive from my GP and the NHS.
+Will is incredibly knowledgeable, professional, down to earth, and always takes the time to explain everything clearly. He never makes me feel rushed, and I genuinely enjoy our conversations during my appointments. Victoria, the receptionist, is absolutely wonderful too. She's kind, attentive, organised, and always makes sure I remember my appointments. Nothing is ever too much trouble for her.
+The clinic itself is spotless, relaxing, and easy to find. Although it's quite a journey from where I live, it's worth every mile.
+I've personally had a very positive experience with my treatments. I also brought my son for an appointment when he was worried about a health issue, and after his treatment and follow-up assessment, we were both very pleased with the outcome. Seeing how much happier and more reassured he was meant a lot to me.
+I've already recommended several friends and family members to Biomedicine UK and will continue to do so. If you're looking for additional support to complement your usual medical care and want to learn more about your health, I would highly recommend speaking to Will and the team.
+A huge thank you to Will and Victoria for your professionalism, kindness, and the care you've shown my family. I truly appreciate everything you do, and I look forward to seeing you again for my follow-up appointment in August.`},
+  {n:"Katie Ingram", d:"August 2025", t:["wellbeing"], feat:"I honestly can't believe how much better I feel after the treatments.", x:`I went to biomedicine to help with burn out and PMDD (pre menstrual disphoric disorder) and I honestly can't believe how much better I feel after the treatments. Some interesting discoveries were made which has helped me understand my body and what I need to feel better.`},
+  {n:"Stephen Bowman", d:"September 2026", t:["pain"], x:`Will treated me for severe back pain and was amazing. 100% recommend. He also treated my friend for a parasite he had in his kidney who was super sceptical....hes amazing and the treatment should be made available on the NHS.`},
+  {n:"Shane Clay", d:"September 2026", t:["gut","family"], x:`Absolutely outstanding experience with Will at Bio Medicine UK. After just four biofrequency sessions, my bladder parasites and heartworms were completely gone—no more heart palpitations or burning when urinating. Cutting gluten also resolved all my digestion issues. My six-year-old daughter had severe food reactions, dark under-eye circles, and was terrified of spiders. After identifying her intolerances to gluten, dairy, and wheat, plus a heavy metal detox for high aluminium, she's transformed in six weeks. The dark circles are gone, she's bright and calm, and now calmly removes spiders herself. Will's care changed both our lives. Highly recommend!`},
+  {n:"Amy Jillings", d:"July 2026", t:["skin","family"], feat:"This is a real game changer. I'd say don't hesitate to get booked in.", x:`I can't recommend Will enough. We decided to give it a try after struggling to find something that would help our son's eczema, and the results have been amazing. His skin is so much calmer, the redness has disappeared, and he's no longer constantly scratching or uncomfortable.
+We noticed a real improvement in such a short time. It's been such a relief to finally find something that works.
+Thank you for making such a difference to our son's skin. Members of my family have also visited Will and seen a massive difference in their life. This is a real game changer. I'd say don't hesitate to get booked in.`},
+  {n:"Margaret Whitehead", d:"July 2026", t:["family"], x:`I first heard about Will last year from a friend. I booked an appointment have never looked back, he is thoroughly informative. Myself and my partner and daughter are feeling much better and cannot recommend this man enough. Anyone struggling with getting answers, this man and his team will help you. I highly recommend anyone to at least give it a try, you won't be disappointed.`},
+  {n:"Shaun Harrison", d:"July 2026", t:["skin"], x:`I came to see will at biomedicine because I had an ongoing skin issue which caused me to come out in a rash whenever I went away on holiday.
+At first I put it down to heat rash and thought nothing of it but it kept appearing everytime I went abroad. I tried countless different suncreams & eventually I went to the doctors and they told me I had developed an allergy to the sun & prescribed me with extra strong antihistamines which I was skeptical to take as I don't like taking medication for the sake of it.
+It was only by chance in conversation someone told me about bio resonance and the benefits so I decided to make contact.
+I attended my initial consultation and was flooded with confidence by will and his knowledge & experience. He identified the root cause of my problem and helped me understand how the problem had developed.
+I then went on & had 2 treatment sessions & a retest to confirm that the treatment had worked.
+I have now just returned from holiday with absolutely no issues whatsoever the whole time I was there. I was finally able to enjoy my time in the sun and relax and not have to worry about the rash appearing which was a huge relief.
+I cant recommend will & the team enough.`},
+  {n:"Rheanna Williams", d:"July 2026", t:["wellbeing"], x:`Still in the process of treatment, however I've seen really noticeable improvements I'm happy with the service and 100% recommend 😊`},
+  {n:"Irene", d:"April 2026", t:["gut"], feat:"I would certainly recommend anyone to make an appointment to reset your life!", x:`Absolutely brilliant organisation. After many years of pain and discomfort after eating food and having endless invasive investigations Will diagnosed I had gluten and lactose intolerance. No doctor or consultant ever mentioned this possibility. After my initial consultation I soon became well and back to feeling my normal self after changing my diet. I had several treatments and I can't believe how well I feel.
+Will is extremely knowledgeable and very approachable. A very calm environment also.
+I would certainly recommend anyone to make an appointment to reset your life! Irene`},
+  {n:"Kate Bushdyhan", d:"March 2026", t:["skin","family"], feat:"Biomedicine UK has been life changing for me!", x:`Biomedicine UK has been life changing for me!
+I've battled with the eczema on my hands for years now making daily life a struggle! After 1 visit and 2 rounds of treatment with Will my hands see completely clear.
+My whole family now come to Will for treatment, His knowledge & care is nothing short of admirable.
+I couldn't recommend Biomedicine UK enough, Thankyou for everything!`},
+  {n:"Nick Rawley", d:"February 2026", t:["gut","family"], feat:"The difference in my lifestyle is black and white compared to years gone by.", x:`Initially I was a bit sceptical after hearing about the treatment but after the consultation with Will and with a better understanding I can not express how much this has changed my life. After suffering with supposed IBS for 16 years with more doctors and camera appointments I care to remember. In recent years covid left me with various conditions the worst was uncontrollable shaking in cold conditions. Will diagnosed dormant Covid in my body along with numerous parasites in my gut and other ailments that were affecting me on a daily basis, the difference in my lifestyle is black and white compared to years gone by.
+I am continuing treatment for a few other minor things but again personally I can not recommend Will enough, wonderful treatment, wonderful service, very affordable and a real nice guy. I have recommended Will to numerous friends and family who have also attended with positive results.`},
+  {n:"Susan Horrocks", d:"December 2025", t:["pain"], x:`My partner had meniscus knee issues with his right knee and a severed tendon in his right shoulder which caused excruciating pain and unable to lie on his side in bed.and unable to lift his arm above his head without inflicting great pain. This Bioresonance treatment has made majorly helped with these issues including much more movement and virtually pain free. He can ride a bike and able to use gardening machinery like I used to do.
+He had very bad fungal toe nail and this treatment has radically helped kill off a lot of the fungus on his toenail and is starting to growing back to normal. He Can't thank you enough for all your efforts in helping him to improve these conditions.`},
+  {n:"Mohammad Aoun", d:"December 2025", t:["skin"], x:`Will really helped me with my eczema last year I was in no state of going out I lost all my confidence as my skin used to always be red and flaky and used to weep liquid last year was the worst year of my life but now I am so much better I have gained my continence back and my skin has got so much better. Will is such a nice person and always brings a smile on my face I highly recommend this treatment`},
+  {n:"Carpicornheart", d:"2025", t:["wellbeing"], x:`I recently visited Will for a series of bioresonance sessions, and I couldn't be more pleased with the experience. As a homeopath, I was looking for an additional way to support my overall well-being and help bring my system into greater homeostasis.
+I had been struggling with low energy levels and frequent migraines, and since starting this therapy, I've noticed a clear improvement in both. Will has a calm, reassuring presence and a depth of knowledge that immediately puts you at ease.
+I've been so impressed with both his professionalism and the results that I've decided to train with him to become a practitioner myself. I can highly recommend his sessions to anyone who wants a gentle and holistic way to support their wellness and balance.`},
+  {n:"Morgan Bird", d:"2025", t:["skin","family"], feat:"In 6 months he has turned my little boy's life around.", x:`Will is amazing with my little boy. We took him in April 2025, Due to my son having really bad, burning, bright red, weepy yellow skin, it was a complete mess and it was to the point where he itched non stop and the doctors just thought it was Exzema, Will started of with the testing at first and after the results, he knew exactly how to help him. It was all food and steroid withdrawl, In 6 months he has turned my little boys life around. We are still very much attending and he has been our angel. Will is a very knowledgeable man and will help you with anything he can. I can not praise him enough the struggles he has helped us with. 100% amazing, thank you once again. You will not regret it.`},
+  {n:"Elizabeth Halliday", d:"2025", t:["gut","wellbeing"], feat:"Most importantly, I feel like I've got my life back.", x:`I can't thank William and the team at the Bio Medical Centre in Delph enough. After struggling with food intolerance, I started a course of resonance treatments about 6 months ago. The difference in my health has been incredible. I'm no longer in constant pain, I'm sleeping so much better, and my stomach — which was always bloated and hard — has settled completely. I've even lost 2 stone in weight without really trying, which has been such a bonus. Most importantly, I feel like I've got my life back. William's knowledge, care and support have been second to none, and I wouldn't hesitate to recommend the centre to anyone who is struggling with similar issues.`},
+  {n:"Gwen Swinbank", d:"January 2025", t:["family"], x:`I had never heard of Bioresonance, but we found ourselves, with our daughter facing a stage 4, spread to the brain, cancer battle, so looked into anything that could help support her alongside her chemotherapy.
+We found Will, who has been very professional, caring and knowledgeable during an extremely stressful time and have being seeing him for over a year now.
+To date she is responding well to all treatments and is leading a fairly normal life.
+We would not hesitate to recommend his services as Bioresonance appears to be helping her /at the very least certainly helps with the side effects of chemotherapy.`},
+  {n:"HMLYN Gold", d:"2024", t:["wellbeing"], x:`Absolutely fantastic place and people! Shortness of breath for nearly three years no resolve going to doctors or even spending around £2000 at private hospital until I came to see William who treated me and wow unbelievable I'm so much better! So happy and highly highly recommend`},
+  {n:"Lily", d:"2024", t:["skin"], feat:"The entire experience from start to finish is so relaxing and welcoming.", x:`Amazing!! 10/10 would recommend! After struggling with eczema and dermatitis my entire life, I heard about Biomedicine UK and decided to give it a go as a last resort. The results of my treatment are unbelievable, with the help of Will I have finally eliminated my severe eczema without the need for steroid creams or monthly injections. The entire experience from start to finish is so relaxing and welcoming, thank you so much to Will and the team!! :)`},
+  {n:"FrostbiteTRM", d:"2024", t:["wellbeing"], x:`So I went through a bit of a process of going in and out of urgent care and many GP appointments trying to figure out what was wrong with me to no prevail for about 3 months. Then I was told about this bio-resonance, searched online and found Will and his clinic, Will is a very knowledgeable man and so easy to talk too. Within 45 mins Will had figured out exactly what I was suffering from and then 2 treatments later I have finally got my life back to normal! I can only advise through my experience if you are struggling with anything to give this a go, it could change your life and bring you back to health you didn't know you had :)
+Thanks a lot Will I appreciate it!`},
+  {n:"Lewis Hamill", d:"December 2023", t:["pain"], x:`Had been getting excruciating pain in my back and a lump would appear, this was a regular occurrence every 2/3 weeks for the last 10/11 months. Doctors said it was due to muscle spasms, physio also couldn't help. Booked in a session for diagnosis with Will and he judged it to be a muscle parasite. 1 session of treatment focusing on said muscle parasite and neither the pain nor the lump has come back. Will be going back every few months just to check up on my health and have recommended all my family and friends that they should do too.`},
+  {n:"Craig Reeve", d:"December 2023", t:["pain","wellbeing"], feat:"Not only do I believe in Bioresonance, I am proof that it works.", x:`My wife had found Bioresonance due to our encounter with pinworms as you have probably read on her review. To be frank I am a man from Wigan that believes a spade is a spade, I thought that Bioresonance was nothing more than hocus pocus. Looking back, my health had been deteriorating for a couple of years, but being a bloke I just carried on feeling rotten without complaining. I was heavily fatigued and was sleeping most of the time between working. I also had back pain that would come and go. I had my annual review with the GP and they told me I was pre diabetic and recommended I take medication. I was adamant I was not pre diabetic as I had no symptoms what so ever. Eventually my back was so bad that I felt I had to do something, I did not want medication from the GP so I decided reluctantly to book in with Will. To say I was sceptical was an understatement! From the moment I sat in that seat I was amazed, Will explained what Bioresonance was and explained the science behind it. That made sense to me and I was beginning to feel more confident with bioresonance, maybe my wife was on to something here! At my assessment Will picked up that my incredible back pain was actually parasites. After this went I had no more back pain and I am still pain free 3 months on. Will also picked up something on the tip of my pancreas, this may well have caused my GP to think that I was pre-diabetic. I also had many other viruses, bacteria and parasites and my vitamin levels were low. I went for my assessment yesterday and I have cleared all of the pathogens. There is still a few things to work on but I am more than confident these will be resolved. I feel so much better, I am not sleeping my life away and living in constant pain. My drive has come back and I feel well. I don't like to say this but it looks like my wife was right :-). Not only do I believe in Bioresonance, I am proof that it works. I am now working towards purchasing a machine of our own.
+I would recommend that you give bioresonance a go at Biomedicine UK, it really is an eye opener and I guarantee it will improve your health. I wouldn't write a review like this if it wasn't true! Thank you Will for everything.`},
+  {n:"gina seal", d:"2023", t:["wellbeing"], x:`Just come away from my first visit with Will and now feeling very positive about managing my Parkinsons condition more successfully. Will has a very gentle and kind manner about him that put me at ease as I am often anxious on meeting people for the first time.
+Looking forward to my next visit.`},
+  {n:"G G", d:"January 2022", t:["pain","wellbeing"], feat:"Being treated by Will has honestly been one of the most worthwhile investments of my life.", x:`Being treated by Will has honestly been one of the most worthwhile investments of my life.
+I went to see Will out of pure intrigue if I'm honest, following a recommendation and having just had a baby a few months earlier I thought he may be able to help rebalance my body following birth and hopefully settle my endometriosis pain which had just started up again, which he has completely relieved along with any ovulation pain and period pains I previously suffered from. However he did so much more than that!
+Unbeknown to me I was riddled with Lyme Disease causing me to have no movement in my toes or feet for years - something that has left western doctors and specialists confused for years and that quite honestly I didn't think Will had a chance of resolving! I couldn't bend my toes or wear flip flops, walking for long periods would cause pain as my feet were generally very stiff and after years of painful tests and examinations under the NHS and no answers, Will was straight away able to identify that I had Lyme Disease and Bioresonance has been able to fix this entirely with zero discomfort! Something I thought would go misunderstood and unresolved for the rest of my life.
+I honestly can't recommend Will enough, not only has he fixed the 'unfixable', he is extremely knowledgable in his field and has a clear passion for what he does, and he's a joy to sit and chat to making the treatment sessions truly enjoyable. He will always be my first point of call now for any issues that may arise! Thank you :)`},
+  {n:"Regina McKenna", d:"2022", t:["pain","wellbeing"], x:`Will had been recommended to me as I had been unwell for sometime, fatigued also in a lot of pain and generally very unwell. I found Will very professional and caring he explained everything in detail to me of how the treatment worked.
+I have had wonderful results from my treatments with Will I feel like I'm living life again.
+Will is a very caring, approachable and understanding person. Regina`},
+  {n:"Naomi Bull", d:"2020", t:["pain","gut","wellbeing"], feat:"For the first time in a long long time it feels like I might get some of my life back!", x:`I've been going to Will now for a few months and after 10 years of poor health, few answers and lots of pain killers, I was very sceptical but I cant believe the difference the treatment is making. I have more energy and less pain, more mobility, my digestion works better and I am less fatigued. For the first time in a long long time it feels like I might get some of my life back! The treatment is easy and Will has explained it all so well. I feel confident in him and the care he is giving me. Couldn't be more amazed at how it all works and the results it has given me already. I would recommend this to anyone and will put a review on again when my treatment is further along. All i can say is Thank you!`},
+];
+
+const FILTERS = [["all","All reviews"],["skin","Eczema & skin"],["gut","Gut & intolerances"],["pain","Pain"],["wellbeing","Energy & wellbeing"],["family","Families & children"]];
+const G_ICON = '<svg viewBox="0 0 48 48" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.5 0 6.7 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.2C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 7l7.4 5.7c4.3-4 6.9-9.9 6.9-17.2z"/><path fill="#FBBC05" d="M10.5 28.5c-.5-1.4-.8-2.9-.8-4.5s.3-3.1.8-4.5l-7.9-6.2C.9 16.6 0 20.2 0 24s.9 7.4 2.6 10.7l7.9-6.2z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.2C6.6 42.6 14.6 48 24 48z"/></svg>';
+const PALETTE = ["#c8a76a","#8fb5a4","#e3cc9b","#b9c9a6","#d9b38c","#a7c4bc"];
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const initials = n => n.split(/\s+/).map(w => w[0]).join("").slice(0,2).toUpperCase();
+const colorFor = n => PALETTE[[...n].reduce((a,c)=>a+c.charCodeAt(0),0) % PALETTE.length];
+
+/* marquee of short pull quotes */
+const pulls = REVIEWS.filter(r => r.feat).map(r => r.feat);
+document.getElementById("marquee").innerHTML = [...pulls, ...pulls].map(p => `<span class="marquee-item">${esc(p)}</span>`).join("");
+
+/* spotlight carousel */
+const feats = REVIEWS.filter(r => r.feat).slice(0, 7);
+const slides = document.getElementById("spotSlides"), dots = document.getElementById("dots");
+slides.innerHTML = feats.map((r,i) => `
+  <div class="spot-slide${i===0?" on":""}">
+    <span class="stars" style="font-size:1.1rem;margin-bottom:18px;display:block">★★★★★</span>
+    <blockquote>${esc(r.feat)}</blockquote>
+    <cite><span class="avatar" style="background:${colorFor(r.n)}">${initials(r.n)}</span><span><b>${esc(r.n)}</b><small>${r.d} · Google review</small></span></cite>
+  </div>`).join("");
+dots.innerHTML = feats.map((_,i) => `<i class="${i===0?"on":""}" data-i="${i}"></i>`).join("");
+let cur = 0, timer;
+function go(i){
+  const s = slides.children, d = dots.children;
+  s[cur].classList.remove("on"); d[cur].classList.remove("on");
+  cur = (i + feats.length) % feats.length;
+  s[cur].classList.add("on"); d[cur].classList.add("on");
+  clearInterval(timer); timer = setInterval(() => go(cur + 1), 7000);
+}
+document.getElementById("prev").onclick = () => go(cur - 1);
+document.getElementById("next").onclick = () => go(cur + 1);
+dots.onclick = e => { if (e.target.dataset.i) go(+e.target.dataset.i); };
+timer = setInterval(() => go(cur + 1), 7000);
+
+/* review wall */
+const wall = document.getElementById("wall"), filtersEl = document.getElementById("filters"), moreBtn = document.getElementById("loadMore");
+let active = "all", shown = 9;
+filtersEl.innerHTML = FILTERS.map(([k,l]) => `<button role="tab" data-k="${k}" class="${k==="all"?"on":""}">${l}</button>`).join("");
+filtersEl.onclick = e => {
+  const k = e.target.dataset.k; if (!k) return;
+  active = k; shown = 9;
+  [...filtersEl.children].forEach(b => b.classList.toggle("on", b.dataset.k === k));
+  renderWall();
+};
+function renderWall(){
+  const list = REVIEWS.filter(r => active === "all" || r.t.includes(active));
+  wall.innerHTML = list.slice(0, shown).map(r => {
+    const long = r.x.length > 340;
+    return `<article class="rcard">
+      <header><span class="avatar" style="background:${colorFor(r.n)}">${initials(r.n)}</span><div><b>${esc(r.n)}</b><small>${r.d}</small></div>${G_ICON}</header>
+      <span class="stars">★★★★★</span>
+      <div class="txt${long?" clamp":""}">${esc(r.x)}</div>
+      ${long?'<button class="more">Read more</button>':""}
+    </article>`;
+  }).join("");
+  moreBtn.style.display = list.length > shown ? "" : "none";
+}
+wall.onclick = e => {
+  if (!e.target.classList.contains("more")) return;
+  const t = e.target.previousElementSibling;
+  const open = t.classList.toggle("clamp");
+  e.target.textContent = open ? "Read more" : "Show less";
+};
+moreBtn.onclick = () => { shown += 9; renderWall(); };
+renderWall();
+
+/* ---------------- Nav, progress, menu ---------------- */
+const nav = document.getElementById("nav"), prog = document.getElementById("progress");
+addEventListener("scroll", () => {
+  nav.classList.toggle("scrolled", scrollY > 40);
+  prog.style.width = (scrollY / (document.documentElement.scrollHeight - innerHeight) * 100) + "%";
+}, {passive:true});
+document.getElementById("burger").onclick = () => document.body.classList.toggle("menu-open");
+document.querySelectorAll("#mobileMenu a").forEach(a => a.onclick = () => document.body.classList.remove("menu-open"));
+
+/* ---------------- Reveal on scroll ---------------- */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold:.12, rootMargin:"0px 0px -40px 0px"});
+document.querySelectorAll(".rv").forEach(el => io.observe(el));
+
+/* ---------------- Spotlight glow on service cards ---------------- */
+document.querySelectorAll(".sv").forEach(c => c.addEventListener("pointermove", e => {
+  const r = c.getBoundingClientRect();
+  c.style.setProperty("--mx", (e.clientX - r.left) + "px");
+  c.style.setProperty("--my", (e.clientY - r.top) + "px");
+}));
+
+/* hero photo parallax zoom */
+const heroImg = document.getElementById("heroImg");
+addEventListener("scroll", () => { if (scrollY < innerHeight) heroImg.style.transform = `scale(${1.08 + scrollY / 4000}) translateY(${scrollY * .04}px)`; }, {passive:true});
+
+/* ---------------- Hero resonance waves ---------------- */
+(() => {
+  const cv = document.getElementById("waves"), ctx = cv.getContext("2d");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let w, h, dpr, t = 0, mx = .5, my = .5;
+  const lines = Array.from({length: 9}, (_, i) => ({
+    amp: 26 + i * 7, freq: .0016 + i * .00022, speed: .25 + i * .05, off: i * .7,
+    y: .38 + i * .045, a: .05 + (i % 3) * .05, gold: i % 3 === 0
+  }));
+  function size(){
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    w = cv.clientWidth; h = cv.clientHeight;
+    cv.width = w * dpr; cv.height = h * dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  function frame(){
+    ctx.clearRect(0,0,w,h);
+    lines.forEach(l => {
+      ctx.beginPath();
+      for (let x = 0; x <= w; x += 6){
+        const env = Math.sin((x / w) * Math.PI);
+        const y = h * (l.y + (my - .5) * .06) + Math.sin(x * l.freq + t * l.speed + l.off) * l.amp * env * (0.7 + mx * .6)
+                + Math.sin(x * l.freq * 2.3 - t * l.speed * .7) * l.amp * .25 * env;
+        x ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+      }
+      ctx.strokeStyle = l.gold ? `rgba(227,204,155,${l.a + .12})` : `rgba(143,181,164,${l.a})`;
+      ctx.lineWidth = l.gold ? 1.3 : 1;
+      ctx.stroke();
+    });
+    t += .016;
+    if (!reduce) requestAnimationFrame(frame);
+  }
+  addEventListener("resize", size);
+  addEventListener("pointermove", e => { mx = e.clientX / innerWidth; my = e.clientY / innerHeight; }, {passive:true});
+  size(); frame();
+})();
+</script>
+</body>
+</html>
